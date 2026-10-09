@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 
+
 test.describe("Login functionality", { tag: "@demo" }, () => {
     test.beforeEach("Go to login page", async ({ page }) => {
         // 1. Launch URL and assert title and header
@@ -20,6 +21,7 @@ test.describe("Login functionality", { tag: "@demo" }, () => {
 
         // Assert a text
         await expect(page.locator("h2")).toContainText("Make Appointment");
+
     });
 
     test("Should prevent login with incorrect creds", async ({ page }) => {
